@@ -1,0 +1,128 @@
+<!-- desgin a set of responsive tabs that switch  content when clicked.ensure that  tabs trasnform into  an  accordion-style  layout on smaller screen -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .tabs{
+
+            display: flex;
+            flex-direction: column;
+        }
+        .tab{
+            border: 1px solid #ccc;
+            margin-bottom: 1rem;
+        }
+        .tab button{
+            background-color: #f1f1f1;
+            width: 100%;
+            padding: 1rem;
+            text-align: left;
+            border: none;
+            outline: none;
+            transition: background-color 0.3s;
+        }
+        .tab button:hover{
+            background-color: #ddd;
+        }
+        .tab button.active{
+            background-color: #ccc;
+        }
+        .content1{
+            display: none;
+            padding: 1rem;
+        }
+        .content2{
+            display: none;
+            padding: 1rem;
+        }
+       
+        @media (max-width: 768px){
+
+            .tabs{
+                flex-direction: column;
+            }
+            .tab button{
+                text-align: center;
+            }
+            .content1{
+
+                display: block;
+            }
+            .content2{
+                display: none;
+            }
+           
+
+         
+           
+        }
+
+</style>
+</head>
+<body>
+        
+        <div class="tabs">
+            <div class="tab">
+                <button id="tab1" onclick="clicked()">Tab 1</button>
+                <div class="content1">
+                    <p>Tab 1 content</p>
+                </div>
+                </div>
+            <div class="tab">
+                <button id="tab2" onclick="clicked2()">Tab 2</button>
+                <div class="content2">
+                    <p>Tab 2 content</p>
+            </div>
+            </div>
+
+
+
+   <script>
+         const tab1 = document.getElementById('tab1');
+            const tab2 = document.getElementById('tab2');
+            const content1 = document.querySelector('.content1');
+            const content2 = document.querySelector('.content2');
+         
+            function clicked(){
+                content1.style.display = 'block';
+                content2.style.display = 'none';
+             tab1.addEventListener("click",function(){
+                content1.style.display ="none"
+             })
+            }
+
+            function clicked2(){
+                content2.style.display = 'block';
+                content1.style.display = 'none';
+             tab2.addEventListener("click",function(){
+                content2.style.display ="none"
+             })
+            }
+
+
+
+
+
+
+
+
+  
+
+
+    
+
+
+  
+
+       
+
+
+
+
+   </script>
+</body>
+</html>

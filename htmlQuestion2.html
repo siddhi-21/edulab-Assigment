@@ -1,0 +1,78 @@
+<!-- responsive grid layout that display 6 cards in 2 rows  and 3 columns on large screen and stack the cards vertically on smaller screen.each card should contain an image ,a title and a breif description -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">h
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+        .card{
+            border: 1px solid #ccc;
+            padding: 1rem;
+            text-align: center;
+        }
+        @media (max-width: 768px){
+            .container{
+                grid-template-columns: 1fr;
+            }
+        }
+
+        
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <img src="https://picsum.photos/200" alt="image1">
+            <h2>Card 1</h2>
+            <p>Card 1 description</p>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/200" alt="image2">
+            <h2>Card 2</h2>
+            <p>Card 2 description</p>
+        </div>
+        <div class="card">
+            <img src="https://picsum.photos/200" alt="image3">
+            <h2>Card 3</h2>
+            <p>Card 3 description</p>
+         </div>
+         <div class="card">
+            <img src="https://picsum.photos/200" alt="image3">
+            <h2>Card 4</h2>
+            <p>Card 4 description</p>
+         </div>
+         <div class="card">
+            <img src="https://picsum.photos/200" alt="image3">
+            <h2>Card 5</h2>
+            <p>Card 5 description</p>
+         </div>
+         <div class="card">
+            <img src="https://picsum.photos/200" alt="image3">
+            <h2>Card 6</h2>
+            <p>Card 6 description</p>
+         </div>
+
+
+
+
+
+
+
+
+    
+</body>
+</html>
